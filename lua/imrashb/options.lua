@@ -44,3 +44,4 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.opt.scrolloff = 8
+vim.opt.fillchars:append({ diff = "/" })

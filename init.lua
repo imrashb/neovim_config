@@ -16,6 +16,7 @@ require("lazy").setup(require("imrashb.plugins"))
 
 require("imrashb.options")
 require("imrashb.keybinds")
+require("imrashb.plugins.evil_lualine")
 
 require("colorizer").setup()
 require("gitsigns").setup()
@@ -92,4 +93,4 @@ autocmd("BufWritePost", {
 	command = ":FormatWrite",
 })
 
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("tokyonight-night")

@@ -2,7 +2,12 @@ return {
 	"folke/which-key.nvim",
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	"folke/neodev.nvim",
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
 	{ "numToStr/Comment.nvim", opts = {} },
 	require("imrashb.plugins.tree"),
 	require("imrashb.plugins.telescope"),
@@ -11,7 +16,13 @@ return {
 	require("imrashb.plugins.cmp"),
 	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 	{ "norcalli/nvim-colorizer.lua" },
-	{ "lewis6991/gitsigns.nvim" },
+	{ "lewis6991/gitsigns.nvim", opts = {
+		current_line_blame = true,
+	} },
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 	{ "sindrets/diffview.nvim" },
 	{
 		"windwp/nvim-autopairs",
