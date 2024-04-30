@@ -18,6 +18,8 @@ require("imrashb.options")
 require("imrashb.keybinds")
 
 require("colorizer").setup()
+require("gitsigns").setup()
+
 require("mason").setup({
 	ui = {
 		icons = {

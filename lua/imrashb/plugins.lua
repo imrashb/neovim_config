@@ -11,4 +11,6 @@ return {
 	require("imrashb.plugins.cmp"),
 	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 	{ "norcalli/nvim-colorizer.lua" },
+	{ "lewis6991/gitsigns.nvim" },
+	{ "sindrets/diffview.nvim" },
 }
