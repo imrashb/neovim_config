@@ -6,6 +6,7 @@ return {
     { 'numToStr/Comment.nvim', opts = {} },
     require('imrashb.plugins.tree'),
     require('imrashb.plugins.telescope'),
+    require('imrashb.plugins.whichkey'),
     {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'}
 }
 
