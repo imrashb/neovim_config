@@ -31,6 +31,7 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+require("bufferline").setup{}
 
 -- Highlight when yanking (copying) text
 --  Try it with yap in normal mode
