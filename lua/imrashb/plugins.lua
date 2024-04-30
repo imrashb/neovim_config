@@ -8,5 +8,7 @@ return {
 	require("imrashb.plugins.telescope"),
 	require("imrashb.plugins.whichkey"),
 	require("imrashb.plugins.mason"),
+	require("imrashb.plugins.cmp"),
 	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{ "norcalli/nvim-colorizer.lua" },
 }

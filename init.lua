@@ -17,6 +17,7 @@ require("lazy").setup(require("imrashb.plugins"))
 require("imrashb.options")
 require("imrashb.keybinds")
 
+require("colorizer").setup()
 require("mason").setup({
 	ui = {
 		icons = {
