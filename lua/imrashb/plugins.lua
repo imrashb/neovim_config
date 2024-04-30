@@ -13,4 +13,9 @@ return {
 	{ "norcalli/nvim-colorizer.lua" },
 	{ "lewis6991/gitsigns.nvim" },
 	{ "sindrets/diffview.nvim" },
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
+	},
 }
