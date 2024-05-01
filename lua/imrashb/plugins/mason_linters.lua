@@ -1,8 +1,0 @@
--- -- LINTING
--- require("mason-nvim-lint").setup({
--- 	ensure_installed = { "luacheck" },
--- })
---
--- require("lint").linters_by_ft = {
--- 	lua = { "luacheck" },
--- }

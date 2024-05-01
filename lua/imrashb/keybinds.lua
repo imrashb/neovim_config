@@ -27,3 +27,6 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "[f]ind [h]elp" })
 -- Diffview
 vim.keymap.set("n", "<leader>gdo", "<cmd>:DiffviewOpen<CR>", { desc = "[g]it [d]iff [o]pen" })
 vim.keymap.set("n", "<leader>gdc", "<cmd>:DiffviewClose<CR>", { desc = "[g]it [d]iff [c]lose" })
+
+-- GitBlame
+vim.keymap.set("n", "<leader>gdb", "<cmd>:GitBlameOpenCommitURL<CR>", { desc = "[g]it [d]iff [b]lame" })

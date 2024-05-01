@@ -17,13 +17,13 @@ require("lazy").setup(require("imrashb.plugins"))
 require("imrashb.options")
 require("imrashb.keybinds")
 require("imrashb.plugins.evil_lualine")
+require("gitblame").setup()
 
 require("colorizer").setup()
 require("gitsigns").setup()
 
 -- LSP / LINTING / FORMATTING
 require("imrashb.plugins.mason_lsps")
-require("imrashb.plugins.mason_linters")
 require("imrashb.plugins.mason_formatters")
 
 vim.cmd.colorscheme("tokyonight-night")

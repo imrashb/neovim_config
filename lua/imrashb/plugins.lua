@@ -16,9 +16,7 @@ return {
 	require("imrashb.plugins.cmp"),
 	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 	{ "norcalli/nvim-colorizer.lua" },
-	{ "lewis6991/gitsigns.nvim", opts = {
-		current_line_blame = true,
-	} },
+	{ "lewis6991/gitsigns.nvim" },
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -29,4 +27,5 @@ return {
 		event = "InsertEnter",
 		config = true,
 	},
+	{ "f-person/git-blame.nvim" },
 }
