@@ -26,4 +26,4 @@ require("gitsigns").setup()
 require("imrashb.plugins.mason_lsps")
 require("imrashb.plugins.mason_formatters")
 
-vim.cmd.colorscheme("tokyonight-night")
+vim.cmd.colorscheme("tokyonight-storm")
