@@ -23,6 +23,14 @@ return {
 		config = true,
 	},
 	{ "f-person/git-blame.nvim" },
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		opts = {},
+		config = function()
+			require("ibl").setup()
+		end,
+	},
 	require("imrashb.plugins.tree"),
 	require("imrashb.plugins.telescope"),
 	require("imrashb.plugins.whichkey"),
