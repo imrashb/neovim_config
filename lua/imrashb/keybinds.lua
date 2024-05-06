@@ -30,3 +30,6 @@ vim.keymap.set("n", "<leader>gdc", "<cmd>:DiffviewClose<CR>", { desc = "[g]it [d
 
 -- GitBlame
 vim.keymap.set("n", "<leader>gdb", "<cmd>:GitBlameOpenCommitURL<CR>", { desc = "[g]it [d]iff [b]lame" })
+
+-- Open Definition Preview
+vim.keymap.set("n", "<leader>gp", "<cmd>:lua vim.lsp.buf.hover()<CR>", { desc = "[g]oto definition [p]review" })
