@@ -62,6 +62,11 @@ require("telescope").setup({
 	},
 })
 
+require("nvim-ts-autotag").setup({
+	enable = true,
+	enable_rename = true,
+})
+
 local nvim_tree_api = require("nvim-tree.api")
 nvim_tree_api.tree.toggle_gitignore_filter()
 
