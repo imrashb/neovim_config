@@ -25,6 +25,7 @@ return {
 		config = true,
 	},
 	{ "f-person/git-blame.nvim" },
+    { "windwp/nvim-ts-autotag" },
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
