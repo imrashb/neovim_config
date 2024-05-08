@@ -23,6 +23,7 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "[f]ind [f]iles" 
 vim.keymap.set("n", "<leader>fw", builtin.live_grep, { desc = "[f]ind [w]ord" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "[f]ind [b]uffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "[f]ind [h]elp" })
+vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { desc = "[f]ind [r]eferences" })
 
 -- Diffview
 vim.keymap.set("n", "<leader>gdo", "<cmd>:DiffviewOpen<CR>", { desc = "[g]it [d]iff [o]pen" })
