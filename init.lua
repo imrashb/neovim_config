@@ -56,6 +56,9 @@ require("telescope").setup({
 		find_files = {
 			hidden = true,
 		},
+		buffers = {
+			initial_mode = "normal",
+		},
 	},
 })
 
