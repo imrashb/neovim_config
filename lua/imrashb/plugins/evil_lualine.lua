@@ -6,8 +6,8 @@ local lualine = require("lualine")
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-    bg       = '#202328',
-    fg       = '#bbc2cf',
+    bg       = '#343955',
+    fg       = '#40c3de',
     yellow   = '#ECBE7B',
     cyan     = '#008080',
     darkblue = '#081633',
@@ -37,7 +37,7 @@ local conditions = {
 local config = {
 	options = {
 		-- Disable sections and component separators
-		component_separators = "",
+		component_separators = " ",
 		section_separators = "",
 		theme = {
 			-- We are going to use lualine_c an lualine_x as left and
@@ -117,13 +117,7 @@ ins_left({
 		}
 		return { fg = mode_color[vim.fn.mode()] }
 	end,
-	padding = { right = 1 },
-})
-
-ins_left({
-	-- filesize component
-	"filesize",
-	cond = conditions.buffer_not_empty,
+	padding = { right = 1, left = 1 },
 })
 
 ins_left({
@@ -185,15 +179,8 @@ ins_right({
 })
 
 ins_right({
-	"fileformat",
-	fmt = string.upper,
-	icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-	color = { fg = colors.green, gui = "bold" },
-})
-
-ins_right({
 	"branch",
-	icon = "",
+	icon = "",
 	color = { fg = colors.violet, gui = "bold" },
 })
 
