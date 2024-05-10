@@ -34,9 +34,9 @@ vim.keymap.set("n", "<leader>gdb", "<cmd>:GitBlameOpenCommitURL<CR>", { desc = "
 
 -- LSP Keybinds
 -- Open Definition Preview
-vim.keymap.set("n", "<leader>pp", vim.lsp.buf.hover, { desc = "[pp]review" })
+vim.keymap.set("n", "<leader>gpp", vim.lsp.buf.hover, { desc = "[g]oto [pp]review" })
 -- Rename
 vim.keymap.set("n", "<leader>re", vim.lsp.buf.rename, { desc = "[re]name" })
 
 -- Diagnostics
-vim.keymap.set("n", "<leader>pd", vim.diagnostic.open_float, { desc = "[p]review [d]iagnostics" })
+vim.keymap.set("n", "<leader>gpd", vim.diagnostic.open_float, { desc = "[g]oto [p]review [d]iagnostics" })
