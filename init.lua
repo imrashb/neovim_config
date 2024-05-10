@@ -60,6 +60,13 @@ require("telescope").setup({
 			initial_mode = "normal",
 		},
 	},
+	defaults = {
+		mappings = {
+			n = {
+				["<c-d>"] = require("telescope.actions").delete_buffer,
+			},
+		},
+	},
 })
 
 require("nvim-ts-autotag").setup({
