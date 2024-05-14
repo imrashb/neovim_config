@@ -6,7 +6,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.stylua,
 		require("none-ls.diagnostics.eslint_d"),
 		require("none-ls.formatting.eslint_d"),
-		null_ls.builtins.formatting.prettier,
+		null_ls.builtins.formatting.prettier_d,
 		-- null_ls.builtins.completion.spell,
 	},
 	on_attach = function(client, bufnr)
@@ -24,5 +24,5 @@ null_ls.setup({
 })
 
 require("mason-null-ls").setup({
-	ensure_installed = { "stylua", "eslint_d", "prettier" },
+	ensure_installed = { "stylua", "eslint_d", "prettier_d" },
 })
