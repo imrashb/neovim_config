@@ -32,11 +32,15 @@ require("lualine").setup({
 					if next(clients) == nil then
 						return msg
 					end
+					local array = {}
 					for _, client in ipairs(clients) do
 						local filetypes = client.config.filetypes
 						if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-							return client.name
+							table.insert(array, client.name)
 						end
+					end
+					if #array > 0 then
+						return table.concat(array, ", ")
 					end
 					return msg
 				end,
