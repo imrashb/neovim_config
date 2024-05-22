@@ -63,6 +63,10 @@ require("telescope").setup({
 		buffers = {
 			initial_mode = "normal",
 		},
+		oldfiles = {
+			cwd_only = true,
+			initial_mode = "normal",
+		},
 	},
 	defaults = {
 		mappings = {
