@@ -55,6 +55,21 @@ require("gitblame").setup()
 
 require("colorizer").setup()
 require("gitsigns").setup()
+local colors = require("tokyonight.colors").setup()
+require("scrollbar.handlers.gitsigns").setup()
+require("scrollbar").setup({
+	handle = {
+		color = colors.bg_highlight,
+	},
+	marks = {
+		Search = { color = colors.orange },
+		Error = { color = colors.error },
+		Warn = { color = colors.warning },
+		Info = { color = colors.info },
+		Hint = { color = colors.hint },
+		Misc = { color = colors.purple },
+	},
+})
 require("telescope").setup({
 	pickers = {
 		find_files = {
@@ -94,3 +109,32 @@ vim.cmd.colorscheme("tokyonight-storm")
 -- Diff Colors
 vim.cmd([[:highlight DiffAdd guibg=#24603b]])
 vim.cmd([[:highlight DiffDelete guibg=#56283b]])
+
+-- require("diffview").setup({
+-- 	hooks = {
+-- 		diff_buf_win_enter = function(bufnr, winid, ctx)
+-- 			if ctx.layout_name:match("^diff2") then
+-- 				if ctx.symbol == "a" then
+-- 					vim.cmd("hi DiffviewDiffDeleteChange guifg=none guibg=#4d2f36")
+-- 					vim.cmd("hi DiffviewDiffDeleteText guifg=none guibg=#39292d")
+-- 					vim.cmd("hi DiffviewDiffDeleteRemove guifg=#605e63 guibg=none")
+-- 					vim.opt_local.winhl = table.concat({
+-- 						"DiffAdd:DiffviewDiffAddAsDelete",
+-- 						"DiffChange:DiffviewDiffDeleteChange",
+-- 						"DiffText:DiffviewDiffDeleteText",
+-- 						"DiffDelete:DiffviewDiffDeleteRemove",
+-- 					}, ",")
+-- 				elseif ctx.symbol == "b" then
+-- 					vim.cmd("hi DiffviewDiffAddText guibg=#2c352e guifg=none")
+-- 					vim.cmd("hi DiffviewDiffAddChange guibg=#2c352e guifg=none")
+-- 					vim.cmd("hi DiffviewDiffAddDelete guifg=#605e63 guibg=none")
+-- 					vim.opt_local.winhl = table.concat({
+-- 						"DiffChange:DiffviewDiffAddChange",
+-- 						"DiffText:DiffviewDiffAddText",
+-- 						"DiffDelete:DiffviewDiffAddDelete",
+-- 					}, ",")
+-- 				end
+-- 			end
+-- 		end,
+-- 	},
+-- })
