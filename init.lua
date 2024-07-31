@@ -20,6 +20,7 @@ require("imrashb.keybinds")
 require("lualine").setup({
 	options = {
 		theme = "tokyonight",
+		globalstatus = true,
 	},
 	sections = {
 		lualine_c = {
@@ -96,6 +97,19 @@ require("nvim-ts-autotag").setup({
 	enable = true,
 	enable_rename = true,
 })
+
+-- require("neotest").setup({
+-- 	adapters = {
+-- 		require("neotest-jest")({
+-- 			jestCommand = "npm test --",
+-- 			jestConfigFile = "custom.jest.config.ts",
+-- 			env = { CI = true },
+-- 			cwd = function(path)
+-- 				return vim.fn.getcwd()
+-- 			end,
+-- 		}),
+-- 	},
+-- })
 
 local nvim_tree_api = require("nvim-tree.api")
 nvim_tree_api.tree.toggle_gitignore_filter()

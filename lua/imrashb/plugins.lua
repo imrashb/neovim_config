@@ -40,6 +40,27 @@ return {
 	{
 		"petertriho/nvim-scrollbar",
 	},
+	{
+		"antosha417/nvim-lsp-file-operations",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-tree.lua",
+		},
+		config = function()
+			require("lsp-file-operations").setup()
+		end,
+	},
+	-- {
+	-- 	"nvim-neotest/neotest",
+	-- 	dependencies = {
+	-- 		"nvim-neotest/nvim-nio",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"antoinemadec/FixCursorHold.nvim",
+	-- 		"nvim-treesitter/nvim-treesitter",
+	--      "nvim-neotest/neotest-jest"
+	-- 	},
+	-- },
+
 	require("imrashb.plugins.tree"),
 	require("imrashb.plugins.telescope"),
 	require("imrashb.plugins.whichkey"),

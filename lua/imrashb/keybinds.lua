@@ -41,3 +41,21 @@ vim.keymap.set("n", "<leader>re", vim.lsp.buf.rename, { desc = "[re]name" })
 
 -- Diagnostics
 vim.keymap.set("n", "<leader>gpd", vim.diagnostic.open_float, { desc = "[g]oto [p]review [d]iagnostics" })
+vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
+vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
+
+-- Neotest
+-- vim.keymap.set("n", "<leader>tc", '<cmd>:lua require("neotest").run.run()<CR>', { desc = "run [t]est [c]urrent" })
+-- vim.keymap.set(
+-- 	"n",
+-- 	"<leader>tf",
+-- 	'<cmd>:lua require("neotest").run.run(vim.fn.expand("%"))<CR>',
+-- 	{ desc = "run [t]est [f]ile" }
+-- )
+-- vim.keymap.set("n", "<leader>ts", '<cmd>:lua require("neotest").run.stop()<CR>', { desc = "[t]est [s]top" })
+-- vim.keymap.set(
+-- 	"n",
+-- 	"<leader>to",
+-- 	'<cmd>:lua require("neotest").output_panel.toggle()<CR>',
+-- 	{ desc = "open [t]est [o]utput" }
+-- )
