@@ -19,7 +19,7 @@ null_ls.setup({
 					vim.lsp.buf.format({
 						async = false,
 						filter = function(cl)
-							return cl.name ~= "tsserver" -- Don't use tsserver for formatting, use null_ls
+							return cl.name ~= "ts_ls" -- Don't use tsserver for formatting, use null_ls
 						end,
 					})
 				end,

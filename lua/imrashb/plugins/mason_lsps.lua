@@ -31,14 +31,14 @@ local function filterReactDTS(value)
 end
 
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "tsserver", "tailwindcss" },
+	ensure_installed = { "lua_ls", "ts_ls", "tailwindcss" },
 	handlers = {
 		function(server)
 			lspconfig[server].setup({
 				capabilities = lsp_capabilities,
 			})
 		end,
-		["tsserver"] = function()
+		["ts_ls"] = function()
 			local current_dir = vim.fn.getcwd()
 			local init_options = {}
 
@@ -51,7 +51,7 @@ require("mason-lspconfig").setup({
 					},
 				}
 			end
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
 				init_options = init_options,
 				capabilities = lsp_capabilities,
 				settings = {
