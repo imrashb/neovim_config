@@ -31,11 +31,14 @@ local function filterReactDTS(value)
 end
 
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "ts_ls", "tailwindcss" },
+	ensure_installed = { "lua_ls", "tsserver", "tailwindcss", "clangd" },
 	handlers = {
 		function(server)
 			lspconfig[server].setup({
 				capabilities = lsp_capabilities,
+				on_attach = function(client, bufnr)
+					vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
+				end,
 			})
 		end,
 		["ts_ls"] = function()
@@ -68,7 +71,6 @@ require("mason-lspconfig").setup({
 							local filtered_result = filter(result, filterReactDTS)
 							return vim.lsp.handlers["textDocument/definition"](err, filtered_result, method, ...)
 						end
-
 						vim.lsp.handlers["textDocument/definition"](err, result, method, ...)
 					end,
 				},
