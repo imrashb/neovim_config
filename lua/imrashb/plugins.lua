@@ -76,4 +76,5 @@ return {
 	require("imrashb.plugins.mason"),
 	require("imrashb.plugins.cmp"),
 	require("imrashb.plugins.treesitter"),
+	require("imrashb.plugins.codecompanion"),
 }
